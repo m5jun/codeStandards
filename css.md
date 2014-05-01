@@ -36,4 +36,32 @@
     opacity: 1;
   }
   ```
-  ---------
+  
+##2. 媒体查询
+  >切记将媒体查询放在尽可能相关规则的附近。
+  >不要将他们打包放在一个单一样式文件中或者放在文档底部。如果你把他们分开了，将来只会被大家遗忘。
+  
+  ```
+  .element {
+      ... 
+  }
+  .element-avatar {
+      ... 
+  }
+  .element-selected {
+      ... 
+  }
+  
+  @media (min-width: 480px) {
+      .element {
+          ...
+      }
+      .element-avatar {
+          ...
+      }
+      .element-selected {
+          ... 
+      }
+  }
+  
+  ```
