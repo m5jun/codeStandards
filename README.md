@@ -1,0 +1,1 @@
+本项目主要是想收集一些各大互联网公司的一些最佳的web编码实践经验，包括HTML/CSS/javaScript/PHP等。
