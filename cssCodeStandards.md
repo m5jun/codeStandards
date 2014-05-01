@@ -89,3 +89,10 @@
   .icon-home      { background-position: 0 -20px; }
   .icon-account   { background-position: 0 -40px; }
   ```
+
+##4. class和id命名
+>* id和class取通用，尽可能短且有意义的名称；
+>* class和id名全部用小写字母，中间用破折号连接；
+>* 用class来定义样式，用id来定义行为；
+>* 使用如'.j-*'的 class来标识行为，并且不要将这些class包含到CSS文件中；
+>* 切记不用important，可以嵌套提升权重值；
