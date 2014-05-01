@@ -96,3 +96,17 @@
 >* 用class来定义样式，用id来定义行为；
 >* 使用如'.j-*'的 class来标识行为，并且不要将这些class包含到CSS文件中；
 >* 切记不用important，可以嵌套提升权重值；
+>* 避免过度任意的简写。.btn 代表 button，但是 .s 不能表达任何意思；
+
+  ```
+    /* Bad example */
+  .t { ... }
+  .red { ... }
+  .header { ... }
+  
+  /* Good example */
+  .tweet { ... }
+  .important { ... }
+  .tweet-header { ... }
+  
+  ```
