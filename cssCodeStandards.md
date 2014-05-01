@@ -99,7 +99,7 @@
 >* 避免过度任意的简写。.btn 代表 button，但是 .s 不能表达任何意思；
 
   ```
-    /* Bad example */
+  /* Bad example */
   .t { ... }
   .red { ... }
   .header { ... }
@@ -108,5 +108,4 @@
   .tweet { ... }
   .important { ... }
   .tweet-header { ... }
-  
   ```
