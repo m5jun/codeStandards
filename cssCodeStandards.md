@@ -109,3 +109,36 @@
   .important { ... }
   .tweet-header { ... }
   ```
+##5. 基本语法
+>* 对多个选择器运用同样的样式时，每个选择器单独放一行，这样更加清楚；
+>* 每个声明块的左花括号前添加一个空格，这样易读；
+>* 多行声明块的右花括号应当单独成行；
+>* 每条声明语句的 : 后应该插入一个空格；
+>* 所有声明语句都应当以分号结尾；
+>* 对于以逗号分隔的属性值，每个逗号后面都应该插入一个空格，例如，box-shadow；
+>* 不要在 rgb()、rgba()、hsl()、hsla() 或 rect() 值的内部的逗号后面插入空格；
+>* 对于属性值或颜色参数，省略小于 1 的小数前面的 0；
+>* 十六进制值应该全部小写，例如，#fff，在扫描文档时，小写字符易于分辨，因为他们的形式更易于区分；
+>* 尽量使用简写形式的十六进制值，例如，用 #fff 代替 #ffffff；
+>* 为选择器中的属性添加双引号，例如，input[type="text"]；
+>* 避免为 0 值指定单位，例如，用 margin: 0; 代替 margin: 0px；
+
+  ```
+    /* Bad CSS */
+  .selector, .selector-secondary, .selector[type=text] {
+    padding:15px;
+    margin:0px 0px 15px;
+    background-color:rgba(0, 0, 0, 0.5);
+    box-shadow:0px 1px 2px #CCC,inset 0 1px 0 #FFFFFF
+  }
+  
+  /* Good CSS */
+  .selector,
+  .selector-secondary,
+  .selector[type="text"] {
+    padding: 15px;
+    margin-bottom: 15px;
+    background-color: rgba(0,0,0,.5);
+    box-shadow: 0 1px 2px #ccc, inset 0 1px 0 #fff;
+  }
+  ```
