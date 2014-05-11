@@ -29,3 +29,40 @@
       value = $first.val();
   
   ```
+##3. 字符串过长截断
+  >摘自百度商业前端技术组：按一定长度截断字符串，并使用+运算符进行连接。分隔字符串尽量按语义进行，如不要在一个完整的名词中间断开。特别的，对于HTML片段的拼接，通过缩进，保持和HTML相同的结构，也可使用数组来进行拼接，相对+运算更容易调整缩进。
+
+  ```
+   var html = '' // 此处用一个空字符串，以便整个HTML片段都在新行严格对齐
+      + '<article>'
+      +     '<h1>Title here</h1>'
+      +     '<p>This is a paragraph</p>'
+      +     '<footer>Complete</footer>'
+      + '</article>';
+      
+      
+      var html = [
+        '<article>',
+            '<h1>Title here</h1>',
+            '<p>This is a paragraph</p>',
+            '<footer>Complete</footer>',
+        '</article>'
+      ];
+    html = html.join(''); // 注意需要join
+  
+  ```
+  
+##3. 过长的逻辑条件组合
+  >当较复杂的逻辑条件组合比较长时，应当将每个条件独立一行，逻辑运算符放置在行首进行分隔，或将部分逻辑按逻辑组合进行分隔。最终将右括号)与左大括号{放在独立一行，保证与if内语句块能容易视觉辨识。
+
+  ```
+    // 注意逻辑运算符前的缩进
+  if (user.isAuthenticated()
+      && user.isInRole('admin')
+      && user.hasAuthority('add-admin')
+      || user.hasAuthority('delete-admin')
+  ) {
+      // Code
+  }
+    
+  ```
