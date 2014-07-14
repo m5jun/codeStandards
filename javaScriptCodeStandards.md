@@ -78,3 +78,28 @@
    */
     
   ```
+##6. 空格
+  >在特定的位置加上空格有助于代码的可读性，以下位置 必须(MUST) 加上空格：
+
+除括号外，所有运算符的前后，如
+用作代码块起始的左大括号{前，包括if、else、try、finally这些关键字之后，以及函数定义的参数列表之后
+以下关键字之后：for、switch、while、function
+对象初始化（{ ... }）的每个属性名的冒号:后
+所有逗号,后
+单行的对象初始化（{ ... }）左大括号{后和右大括号}前
+注意：函数声明与具名函数表达式，函数名与括号之间 不允许(MUST NOT) 包含空格，以期和函数调用保持一致。以下是一个函数的正确声明方式：
+
+  ```
+function foo(x, y, z) {
+    // FunctionBody
+}
+
+var foo = function (x, y, z) {
+    // FunctionBody
+};
+
+var foo = function foo(x, y, z) {
+    // FunctionBody
+};
+    
+  ```
